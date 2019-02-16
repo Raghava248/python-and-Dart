@@ -1,3 +1,3 @@
 # python
 Here I used matplotlib module in python to analyse the data and represent them in a graph format
-,List_Comprehensions
+,List_Comprehensions,implementation of stack in python
