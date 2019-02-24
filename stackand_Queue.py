@@ -1,3 +1,4 @@
+#This implementation can be used for both stacks and queues in python
 x = []
 class A:
     def m1(self):
