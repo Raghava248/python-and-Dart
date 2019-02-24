@@ -1,0 +1,55 @@
+#Representing Shallow copy and Deep copy in Python
+#Shallow COPY
+Shallow Copy
+A shallow copy creates a new object which stores the reference of the original elements.
+So, a shallow copy doesn't create a copy of nested objects, instead it just copies the reference of nested objects. 
+This means, a copy process does not recurse or create copies of nested objects itself.
+>>> l = [1,2,3,4]
+>>> k = l
+>>> print(id(l))
+43131608
+>>> print(id(k))
+43131608
+
+>>> import copy
+>>> x = [[1,2,3],[4,5,6]]
+>>> y = copy.copy(x)
+>>> print(x)
+[[1, 2, 3], [4, 5, 6]]
+>>> print(y)
+[[1, 2, 3], [4, 5, 6]]
+>>> id(x)
+43132208
+>>> id(y)
+43131848
+>>> l.append(4)
+>>> print(k)
+[1, 2, 3, 4, 4]
+>>> k.append(5)
+>>> print(l)
+[1, 2, 3, 4, 4, 5]
+>>> y.append([7,8,9])
+>>> print(x)
+[[1, 2, 3], [4, 5, 6]]
+>>> print(y)
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> id(x[0])
+43132048
+>>> id(y[0])
+43132048
+>>> z = [[1,2,3],[4,5,6]]
+#Deep COPY
+A deep copy creates a new object and recursively adds the copies of nested objects present in the original elements.
+Let’s continue with example 2. However, we are going to create deep copy using deepcopy() function present in copy module. 
+The deep copy creates independent copy of original object and all its nested objects.
+
+>>> f= copy.deepcopy(z)
+>>> id(z)
+43132608
+>>> id(f)
+47726880
+>>> id(z[0])
+47727360
+>>> id(f[0])
+47726800
+>>> 
