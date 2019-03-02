@@ -5,7 +5,7 @@ y = json.loads(x)
 #The Result is a Python Dictonary
 print(y)
 
----------------------------------------------------
+#---------------------------------------------------
 #Converting Python to JSON
 x = {"id":456,"company":"Google","project":"Solar"}
 y = json.dumps(x)
