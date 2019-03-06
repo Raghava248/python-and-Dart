@@ -23,7 +23,7 @@ def f(y):
         for i in y:
             if i == '6???4' and i == '4???6' and i == '1???9' and i == '5???5' and i == '9???1' and i == '8???2' and i =='2???8' and i == '3???7' and i == '7???3':
                 l = True
-            if y[len(y)-1] == '1???9' and y[len(y)-1] == '9???1' and y[len(y)-1] == '5???5' and y[len(y)-1] == '8???2' and y[len(y)-1] =='2???8'and y[len(y)-1] == '6???4' and y[len(y)-1] == '4???6'and y[len(y)-1]  = '3???7' and y[len(y)-1] = '7???3':
+            if y[len(y)-1] == '1???9' and y[len(y)-1] == '9???1' and y[len(y)-1] == '5???5' and y[len(y)-1] == '8???2' and y[len(y)-1] =='2???8'and y[len(y)-1] == '6???4' and y[len(y)-1] == '4???6'and y[len(y)-1]  == '3???7' and y[len(y)-1] == '7???3':
                 l = True      
             else:
                 l = False
