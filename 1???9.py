@@ -36,14 +36,12 @@ print(f(y))
 ########################################################
 Method:2
 x = input('Enter any String:');chunck_size = 5;k =5;y = [];j = []
+if k == 5:
+    y.append(x[0:5])
+    k = k+1
 while chunck_size <= len(x)-3:
-    if k == 5:
-        y.append(x[0:5])
-        k = k+1
     y.append(x[chunck_size-1 : chunck_size+4])
     chunck_size = chunck_size + 4
-for i in range(len(y)):
-    if y[i] in ['6???4','4???6','1???9','5???5','9???1','8???2','2???8','3???7','7???3']:        
-        j.append(y[i])
+[j.append(y[i]) for i in range(len(y)) if y[i] in ['6???4','4???6','1???9','5???5','9???1','8???2','2???8','3???7','7???3']]
 print(True) if len(j)>=1 else print(False)
 
